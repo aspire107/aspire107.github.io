@@ -378,7 +378,7 @@ img.mfp-img {
 }
 .popup-modal-filmmaking img {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   object-fit: cover;
 }
 .popup-modal-filmmaking .description-box {
@@ -413,6 +413,9 @@ img.mfp-img {
 }
 .popup-modal-filmmaking .link-box {
 	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	overflow: hidden !important;
 	background: var(--secondary-color);
 }
