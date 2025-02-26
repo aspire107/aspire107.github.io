@@ -675,16 +675,14 @@ strong {
 }
 
 .services-icon { /* Estilos para las nuevas etiquetas <img> */
-    width: 90px; /* Ajusta el ancho según necesites */
-    height: 90px; /* Ajusta la altura según necesites */
+    width: 100px; /* Ajusta el ancho según necesites */
+    height: 100px; /* Ajusta la altura según necesites */
     object-fit: contain; /* Para que la imagen se ajuste al contenedor sin deformarse */
+    font-size: 75px;
+    position: relative;
 }
 
-/*.services-icon {  Estilos eliminados o comentados para las etiquetas <i>
-    font-size: 90px;
-    position: relative;
-    bottom: 15px;
-}*/
+
 
 .services-thumb:hover .services-price-wrap {
     background: var(--secondary-color);
@@ -1223,7 +1221,6 @@ strong {
   background-image: url('/images/kingdom-hearts-bg.jpg');
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-
   background-color: var(--secondary-color);
   background-blend-mode: multiply;
 
@@ -1231,7 +1228,7 @@ strong {
 }
 
 .logo-image{
-  left: -120px;
+  left: -98px;
   top: -175px;
   scale: 0.65;
 }
