@@ -1,3 +1,29 @@
+/* ANIMATIONS */
+
+@keyframes bounce {
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-20px);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+
+
+  @keyframes scaleup {
+	0% {
+	  transform: scale(0.8);
+	  opacity: 0.5;
+	}
+	100% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -364,7 +390,7 @@ img.mfp-img {
  * ------------------------------------------------------------------
  */
  .popup-modal-filmmaking {
-  position: fixed !important;
+	position: fixed !important;
   top: 7.5vh;
   bottom: 10vh;
   left:32.5%;
@@ -372,11 +398,25 @@ img.mfp-img {
 	max-width: 35% !important;
 	background: #FFFFFF;
 	margin: 0 auto;
+	border-radius: 20px;
 }
+
+
+.popup-modal-filmmaking.onclick {
+	animation: scaleup 0.5s; 
+}
+
+
+.popup-modal-filmmaking.clicked {
+	animation: bounce 10s infinite; 
+}
+
 .popup-modal-filmmaking .media {
 	position: relative;
 }
+
 .popup-modal-filmmaking img {
+	border-radius: 20px;
   width: 100%;
   height: 40vh;
   object-fit: cover;
@@ -405,20 +445,22 @@ img.mfp-img {
 	font-family: var(--body-font-family);
 	font-size: 1.5vh;
 	line-height: 2.5vh;
-	text-transform: uppercase;
 	letter-spacing: .1vh;
 	display: block;
 	text-align: left;
 	color: #2b2b2b;
 }
 .popup-modal-filmmaking .link-box {
-	width: 100%;
+	width: 96%;
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	bottom: 2%;
+	left: 2%;
+	border-radius: 20px;
+
 	overflow: hidden !important;
 	background: var(--secondary-color);
 }
+
 .popup-modal-filmmaking .full-link-box {
 	width: 100%;
 	overflow: hidden !important;
@@ -480,6 +522,156 @@ img.mfp-img {
 	color: #FFF;
 	border: none;
 }
+
+
+
+
+
+
+/**
+ * Popup Modal OTHER - (_layout.scss)
+ * ------------------------------------------------------------------
+ */
+ .popup-modal-other {
+	position: fixed !important;
+  top: 12.5vh;
+  bottom: 12.5vh;
+  left:25%;
+  width: 100% !important;
+	max-width: 50% !important;
+	background: #FFFFFF;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+
+.popup-modal-other.onclick {
+	animation: scaleup 0.5s; 
+}
+
+
+.popup-modal-other.clicked {
+	animation: bounce 10s infinite; 
+}
+
+.popup-modal-other .media {
+	position: relative;
+}
+
+.popup-modal-other img {
+	border-radius: 20px;
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+}
+.popup-modal-other .description-box {
+	padding: 2.2vh 4.8vh 0.5vh;
+}
+.popup-modal-other .description-box h4 {
+	font-family: var(--body-font-family);
+  font-weight: var(--font-weight-bold) !important;
+  letter-spacing: -1px;
+	font-size: 2vh;
+	line-height: 2.4vh;
+	margin-bottom: 2vh;
+	letter-spacing: 0.1vh !important;
+  color: var(--secondary-color);
+}
+
+.popup-modal-other .description-box p {
+	font-family: var(--body-font-family);
+	font-size: 1.8vh;
+	line-height: 3vh;
+	margin-bottom: 2vh;
+}
+.popup-modal-other .categories {
+	margin-top: 2vh;
+	font-family: var(--body-font-family);
+	font-size: 1.5vh;
+	line-height: 2.5vh;
+	letter-spacing: .1vh;
+	display: block;
+	text-align: left;
+	color: #2b2b2b;
+}
+.popup-modal-other .link-box {
+	width: 96%;
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	border-radius: 20px;
+
+	overflow: hidden !important;
+	background: var(--secondary-color);
+}
+
+.popup-modal-other .full-link-box {
+	width: 100%;
+	overflow: hidden !important;
+	background: var(--secondary-color);
+}
+
+.popup-modal-other .link-box a {
+	font-family: var(--body-font-family);
+  font-weight: var(--font-weight-bold) !important;
+  letter-spacing: -1px;
+	font-size: 1.6vh;
+	line-height: 8vh;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: .4vh !important;
+	display: block;
+	text-align: center;
+	float: left;
+	width: 50%;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.popup-modal-other .full-link-box a {
+	font-family: var(--body-font-family);
+	font-size: 1.6vh;
+	line-height: 8vh;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: .4vh !important;
+	display: block;
+	text-align: center;
+	float: left;
+	width: 100%;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.popup-modal-other .link-box a:first-child {
+	border-right: 1px solid rgba(200, 200, 200, 0.1);
+}
+.popup-modal-other .link-box a:hover {
+	background: #000;
+	color: #FFF;
+	border: none;
+}
+
+.popup-modal-other .full-link-box a:first-child {
+	border-right: 1px solid rgba(200, 200, 200, 0.1);
+}
+.popup-modal-other .full-link-box a:hover {
+	background: #000;
+	color: #FFF;
+	border: none;
+}
+
+
+
+
+
+
 
 
 .mfp-hide {

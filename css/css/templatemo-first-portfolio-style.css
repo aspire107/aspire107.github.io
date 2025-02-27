@@ -506,7 +506,7 @@ strong {
 .hero-text {
   position: relative;
   z-index: 22;
-  top: 70px;
+  top: 0px;
 }
 
 .hero-image-wrap {
@@ -758,6 +758,8 @@ strong {
   padding: 20px; /* Ajusta este valor para reducir el padding */
   transition: all ease 0.5s;
 }
+
+
 
 .projects-thumb:hover {
   border-color: var(--secondary-color);
