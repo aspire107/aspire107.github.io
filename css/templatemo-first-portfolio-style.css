@@ -1230,6 +1230,7 @@ strong {
 }
 
 .logo-image{
+  background-image: url('/images/_MG_7352.jpg');
   left: -98px;
   top: -440px;
   scale: 0.65;
