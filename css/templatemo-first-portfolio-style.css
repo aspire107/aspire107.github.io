@@ -12,7 +12,7 @@ https://templatemo.com/tm-578-first-portfolio
 -----------------------------------------*/
 :root {
   --white-color:                  #272727;
-  --primary-color:                #d6a33d;
+  --primary-color:                #db11db;
   --secondary-color:              #63cac3;
   --section-bg-color:             #313131;
   --dark-color:                   #efefef;
@@ -209,11 +209,6 @@ strong {
   border: 1px solid var(--border-color);
   border-top-color: var(--white-color);
   animation: spinner .9s linear infinite;
-}
-
-@-webkit-@keyframes spinner {
-  to {transform: rotate(360deg);
-  }
 }
 
 @keyframes spinner {
@@ -598,13 +593,6 @@ strong {
 .featured-text {
   color: var(--secondary-color);
 }
-
-.featured-border-bottom {
-}
-
-.featured-border-start {
-}
-
 
 /*---------------------------------------
   CLIENTS              
