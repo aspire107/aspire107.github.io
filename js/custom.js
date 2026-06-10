@@ -131,10 +131,7 @@ function clickOnSelectableObject(){
 
   /* choose the elements */
 const button1 = document.getElementById("button-projects_1");
-const details1 = document.getElementById("modal-32");
-
-const button2 = document.getElementById("button-projects_2");
-const details2 = document.getElementById("modal-33");
+const details1 = document.getElementById("modal-33");
 
 const button3 = document.getElementById("button-projects_3");
 const details3 = document.getElementById("modal-34");
@@ -154,17 +151,6 @@ const callback1 = () => {
   details1.classList.add("onclick");
   setTimeout(() => {
     details1.classList.add("clicked")
-  }, 500);
-};
-
-const callback2 = () => {
-
-  details2.classList.remove("onclick");
-  details2.classList.remove("clicked");
-
-  details2.classList.add("onclick");
-  setTimeout(() => {
-    details2.classList.add("clicked")
   }, 500);
 };
 
@@ -203,7 +189,6 @@ const callback5 = () => {
 
 /* add event listener */
 button1.addEventListener("click", callback1);
-button2.addEventListener("click", callback2);
 button3.addEventListener("click", callback3);
 button4.addEventListener("click", callback4);
 button5.addEventListener("click", callback5);
