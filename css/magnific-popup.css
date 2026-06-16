@@ -462,7 +462,11 @@ img.mfp-img {
 }
 
 .popup-modal-filmmaking .full-link-box {
-	width: 100%;
+	width: 96%;
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	border-radius: 20px;
 	overflow: hidden !important;
 	background: var(--secondary-color);
 }
@@ -489,6 +493,8 @@ img.mfp-img {
 
 .popup-modal-filmmaking .full-link-box a {
 	font-family: var(--body-font-family);
+  font-weight: var(--font-weight-bold) !important;
+  letter-spacing: -1px;
 	font-size: 1.6vh;
 	line-height: 8vh;
 	color: #000;
@@ -606,7 +612,11 @@ img.mfp-img {
 }
 
 .popup-modal-other .full-link-box {
-	width: 100%;
+	width: 96%;
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	border-radius: 20px;
 	overflow: hidden !important;
 	background: var(--secondary-color);
 }
