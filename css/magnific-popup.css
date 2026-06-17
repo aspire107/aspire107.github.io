@@ -5,7 +5,7 @@
 	  transform: translateY(0);
 	}
 	50% {
-	  transform: translateY(-20px);
+	  transform: translateY(-5px);
 	}
 	100% {
 	  transform: translateY(0);
@@ -408,7 +408,7 @@ img.mfp-img {
 
 
 .popup-modal-filmmaking.clicked {
-	animation: bounce 10s infinite; 
+	animation: bounce 25s infinite; 
 }
 
 .popup-modal-filmmaking .media {
@@ -562,7 +562,7 @@ img.mfp-img {
 
 
 .popup-modal-other.clicked {
-	animation: bounce 10s infinite; 
+	animation: bounce 25s infinite; 
 }
 
 .popup-modal-other .media {
