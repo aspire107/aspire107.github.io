@@ -114,6 +114,73 @@
             0% { opacity: 0; transform: translateY(-6px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+        .popup-modal-other.detail-popup {
+            position: fixed !important;
+            top: 5vh !important;
+            bottom: 5vh !important;
+            left: 10% !important;
+            max-width: 80% !important;
+            width: 80% !important;
+            background: #272727 !important;
+            border-radius: 24px !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+        }
+        .popup-modal-other.detail-popup .media {
+            margin-bottom: 0 !important;
+        }
+        .popup-modal-other.detail-popup .description-box {
+            padding: 20px 40px 100px !important;
+        }
+        .popup-modal-other.detail-popup .link-box {
+            position: fixed !important;
+            bottom: 5vh !important;
+            left: 10% !important;
+            width: 80% !important;
+            border-radius: 0 0 24px 24px !important;
+            background: #272727 !important;
+            padding: 16px 40px !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 16px !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(99, 202, 195, 0.15) !important;
+        }
+        .popup-modal-other.detail-popup .link-box a {
+            float: none !important;
+            width: auto !important;
+            line-height: normal !important;
+            display: inline-block !important;
+        }
+        .popup-modal-other.detail-popup::-webkit-scrollbar {
+            width: 6px;
+        }
+        .popup-modal-other.detail-popup::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 3px;
+        }
+        .popup-modal-other.detail-popup::-webkit-scrollbar-thumb {
+            background: #63cac3;
+            border-radius: 3px;
+        }
+
+        /* Zoom animation for magnific popup */
+        .mfp-with-zoom .mfp-container,
+        .mfp-with-zoom.mfp-bg {
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        .mfp-with-zoom.mfp-ready .mfp-container {
+            opacity: 1;
+        }
+        .mfp-with-zoom.mfp-ready.mfp-bg {
+            opacity: 0.8;
+        }
+        .mfp-with-zoom.mfp-removing .mfp-container,
+        .mfp-with-zoom.mfp-removing.mfp-bg {
+            opacity: 0;
+        }
+
     </style>
 
 </head>
@@ -469,102 +536,132 @@
                         <div class="row pt-lg-5">
 
                             <div class="col-lg-6 col-12">
-                                <a href="#modal-41" class="overlay-more">
-
-                                    <div class="services-thumb" id="button-education">
-
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Education</h3>
-
-                                        </div>
-
-                                        <p></p>
-
-
-                                        <div
-                                            class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="fi-ts-books services-icon"></i>
-                                        </div>
-                                    </div>
+                                <a href="#modal-41" class="clickable-banner text-decoration-none d-flex flex-column justify-content-center align-items-center w-100 overlay-more" style="background: linear-gradient(135deg, #272727, #3a3a3a); min-height: 45vh; border-radius: 20px; cursor: pointer; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='linear-gradient(135deg, #2a2a2a, #454545)'" onmouseout="this.style.background='linear-gradient(135deg, #272727, #3a3a3a)'">
+                                    <span class="clickable-circle d-inline-flex justify-content-center align-items-center" style="width: 100px; height: 100px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 16px; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='rgba(99,202,195,0.25)'" onmouseout="this.style.background='rgba(99,202,195,0.12)'">
+                                        <i class="fi-ts-books" style="font-size: 48px; color: #63cac3;"></i>
+                                    </span>
+                                    <h3 class="mb-0" style="color: #efefef; font-weight: 700; font-size: 28px; pointer-events: none;">Education</h3>
+                                    <p class="mt-1 mb-0" style="color: #e69a29; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; pointer-events: none;">Academic Background</p>
+                                    <span class="banner-tooltip">View full academic background →</span>
                                 </a>
-
                             </div>
 
                             <div class="col-lg-6 col-12">
-                                <a href="#modal-42" class="overlay-more">
-
-                                    <div class="services-thumb" id="button-experience">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Other sectors</h3>
-
-                                        </div>
-
-                                        <p></p>
-
-
-                                        <div
-                                            class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="fi-ts-suitcase-alt services-icon"></i>
-                                        </div>
-                                    </div>
+                                <a href="#modal-42" class="clickable-banner text-decoration-none d-flex flex-column justify-content-center align-items-center w-100 overlay-more" style="background: linear-gradient(135deg, #272727, #3a3a3a); min-height: 45vh; border-radius: 20px; cursor: pointer; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='linear-gradient(135deg, #2a2a2a, #454545)'" onmouseout="this.style.background='linear-gradient(135deg, #272727, #3a3a3a)'">
+                                    <span class="clickable-circle d-inline-flex justify-content-center align-items-center" style="width: 100px; height: 100px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 16px; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='rgba(99,202,195,0.25)'" onmouseout="this.style.background='rgba(99,202,195,0.12)'">
+                                        <i class="fi-ts-suitcase-alt" style="font-size: 48px; color: #63cac3;"></i>
+                                    </span>
+                                    <h3 class="mb-0" style="color: #efefef; font-weight: 700; font-size: 28px; pointer-events: none;">Other Sectors</h3>
+                                    <p class="mt-1 mb-0" style="color: #e69a29; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; pointer-events: none;">Work Experience</p>
+                                    <span class="banner-tooltip">View full work experience →</span>
                                 </a>
                             </div>
 
-
-                            <div id="modal-41" class="popup-modal-other slider mfp-hide">
-
+                            <div id="modal-41" class="popup-modal-other detail-popup slider mfp-hide">
                                 <div class="media">
-                                    <a href="education.html" class="clickable-banner text-decoration-none d-flex flex-column justify-content-center align-items-center w-100" style="background: linear-gradient(135deg, #272727, #3a3a3a); height: 45vh; border-radius: 20px; cursor: pointer; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='linear-gradient(135deg, #2a2a2a, #454545)'" onmouseout="this.style.background='linear-gradient(135deg, #272727, #3a3a3a)'">
-                                        <span class="clickable-circle d-inline-flex justify-content-center align-items-center" style="width: 100px; height: 100px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 16px; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='rgba(99,202,195,0.25)'" onmouseout="this.style.background='rgba(99,202,195,0.12)'">
-                                            <i class="fi-ts-books" style="font-size: 48px; color: #63cac3;"></i>
+                                    <div style="background: linear-gradient(135deg, #272727, #3a3a3a); padding: 50px 40px 30px; text-align: center;">
+                                        <span class="d-inline-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 14px;">
+                                            <i class="fi-ts-books" style="font-size: 34px; color: #63cac3;"></i>
                                         </span>
-                                        <h3 class="mb-0" style="color: #efefef; font-weight: 700; font-size: 28px; pointer-events: none;">Education</h3>
-                                        <p class="mt-1 mb-0" style="color: #e69a29; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; pointer-events: none;">Academic Background</p>
-                                        <span class="banner-tooltip">View full academic background →</span>
-                                    </a>
+                                        <h3 style="color: #efefef; font-weight: 700; font-size: 26px; margin-bottom: 4px;">Education</h3>
+                                        <p style="color: #e69a29; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; margin-bottom: 0;">Academic Background</p>
+                                    </div>
                                 </div>
-
                                 <div class="description-box">
-                                    <div class="categories">My background in history sparked a passion for deep analysis, which ultimately guided me toward my true calling: the video game industry.
+                                    <p style="color: #c0c1c6; font-size: 15px; line-height: 1.7; margin-bottom: 28px;">
+                                        My background in history sparked a passion for deep analysis, which ultimately guided me toward my true calling: the video game industry.
                                         <br><br>
-                                        As a QA Tester, the scientific rigor and critical thinking I developed investigating historical sources are my greatest assets. I leverage this unique humanities perspective to dissect complex systems and ensure the highest standards of gaming quality.</div>
+                                        As a QA Tester, the scientific rigor and critical thinking I developed investigating historical sources are my greatest assets. I leverage this unique humanities perspective to dissect complex systems and ensure the highest standards of gaming quality.
+                                    </p>
 
-                                    <div class="link-box">
-                                        <data>
-                                            <a href="images/CV_ALBERTO_VILLEGAS.pdf">Curriculum</a>
-                                            <a href="#" class="popup-modal-dismiss">Close</a>
-                                        </data>
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2016 - 2018</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Bachelor of Social Sciences</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Here is where my interest in humanities began, particularly in history and art history. Focused on social sciences, providing an understanding of the complexities of society and human behavior.</p>
                                     </div>
 
-                                    <div id="modal-42" class="popup-modal-other slider mfp-hide">
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2018 - 2024</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Degree in History — UGR (University of Granada)</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Specialized in Contemporary History. Developed and honed a scientific and critical approach to analyzing sources and media.</p>
+                                    </div>
 
-                                        <div class="media">
-                                            <a href="other-sectors.html" class="clickable-banner text-decoration-none d-flex flex-column justify-content-center align-items-center w-100" style="background: linear-gradient(135deg, #272727, #3a3a3a); height: 45vh; border-radius: 20px; cursor: pointer; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='linear-gradient(135deg, #2a2a2a, #454545)'" onmouseout="this.style.background='linear-gradient(135deg, #272727, #3a3a3a)'">
-                                                <span class="clickable-circle d-inline-flex justify-content-center align-items-center" style="width: 100px; height: 100px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 16px; transition: all 0.3s ease-in-out;" onmouseover="this.style.background='rgba(99,202,195,0.25)'" onmouseout="this.style.background='rgba(99,202,195,0.12)'">
-                                                    <i class="fi-ts-suitcase-alt" style="font-size: 48px; color: #63cac3;"></i>
-                                                </span>
-                                                <h3 class="mb-0" style="color: #efefef; font-weight: 700; font-size: 28px; pointer-events: none;">Other Sectors</h3>
-                                                <p class="mt-1 mb-0" style="color: #e69a29; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; pointer-events: none;">Work Experience</p>
-                                                <span class="banner-tooltip">View full work experience →</span>
-                                            </a>
-                                        </div>
-                                        <div class="description-box">
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2022</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Erasmus Tromsø Program</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Explored topics related to human rights, offering a unique perspective on global history from the Arctic region. Specialized in the history and cultural heritage of the Sami Indigenous Peoples.</p>
+                                    </div>
 
-                                            <div class="categories">My diverse path across different industries has been a powerful school for real-world skills, teaching me to thrive under pressure and maintain an adaptable, hands-on mindset in any environment.
-                                                <br><br>
-                                                From managing full business operations to event logistics and sales, these roles forged my teamwork and communication skills. Today, I bring this versatile, problem-solving background into my daily work to tackle any challenge smoothly.
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2024</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">B2 English Certification</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Demonstrated proficiency in English at an upper-intermediate level.</p>
+                                    </div>
 
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2026 — in progress</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">ISTQB (Foundation Level)</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Developed a strong understanding of key testing principles and learned how to apply techniques which are highly useful when working as a QA.</p>
+                                    </div>
 
-                                                <div class="link-box">
-                                                    <data>
-                                                        <a href="images/CV_ALBERTO_VILLEGAS.pdf">Curriculum</a>
-                                                        <a href="#" class="popup-modal-dismiss">Close</a>
-                                                    </data>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="link-box">
+                                    <data>
+                                        <a href="images/CV_ALBERTO_VILLEGAS.pdf" class="custom-btn btn">Download CV</a>
+                                        <a href="#" class="popup-modal-dismiss custom-btn btn">Close</a>
+                                    </data>
+                                </div>
+                            </div>
+
+                            <div id="modal-42" class="popup-modal-other detail-popup slider mfp-hide">
+                                <div class="media">
+                                    <div style="background: linear-gradient(135deg, #272727, #3a3a3a); padding: 50px 40px 30px; text-align: center;">
+                                        <span class="d-inline-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background: rgba(99, 202, 195, 0.12); border-radius: 50%; margin-bottom: 14px;">
+                                            <i class="fi-ts-suitcase-alt" style="font-size: 34px; color: #63cac3;"></i>
+                                        </span>
+                                        <h3 style="color: #efefef; font-weight: 700; font-size: 26px; margin-bottom: 4px;">Other Sectors</h3>
+                                        <p style="color: #e69a29; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; margin-bottom: 0;">Work Experience</p>
                                     </div>
                                 </div>
+                                <div class="description-box">
+                                    <p style="color: #c0c1c6; font-size: 15px; line-height: 1.7; margin-bottom: 28px;">
+                                        My diverse path across different industries has been a powerful school for real-world skills, teaching me to thrive under pressure and maintain an adaptable, hands-on mindset in any environment.
+                                        <br><br>
+                                        From managing full business operations to event logistics and sales, these roles forged my teamwork and communication skills. Today, I bring this versatile, problem-solving background into my daily work to tackle any challenge smoothly.
+                                    </p>
+
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2018</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Insurance Agent — Granada, Spain</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">First professional experience at one of Spain's largest insurance companies. Acquired clients through phone calls and in-person. Developed strong communication, persuasion, and customer service skills.</p>
+                                    </div>
+
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2019</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Stage Setup and Dismantling — Granada, Spain</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Worked at festivals and cultural events setting up and dismantling stages. Handled equipment such as screens and instruments. Gained teamwork experience and adaptability in fast-paced environments.</p>
+                                    </div>
+
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2024</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Pintxos y Tapas — Aarhus, Denmark</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Started in the business since its opening, doing carpentry work and setting up a Streetfood stand. In charge of kitchen help, customer service, and stock management.</p>
+                                    </div>
+
+                                    <div style="background: #313131; border-radius: 14px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #63cac3;">
+                                        <span style="display: inline-block; background: rgba(99, 202, 195, 0.15); color: #63cac3; font-size: 11px; font-weight: 500; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;">2024</span>
+                                        <h4 style="color: #efefef; font-weight: 700; font-size: 18px;">Green Neighbour — Aarhus, Denmark</h4>
+                                        <p style="color: #c0c1c6; font-size: 14px; line-height: 1.6; margin-bottom: 0;">Full management of the establishment, from opening to closing. Stock control, kitchen supervision, and customer service. Developed skills in team coordination, operations management, and working under pressure.</p>
+                                    </div>
+
+                                </div>
+                                <div class="link-box">
+                                    <data>
+                                        <a href="images/CV_ALBERTO_VILLEGAS.pdf" class="custom-btn btn">Download CV</a>
+                                        <a href="#" class="popup-modal-dismiss custom-btn btn">Close</a>
+                                    </data>
+                                </div>
+                            </div>
         </section>
 
         <section class="contact section-padding" id="section_5">

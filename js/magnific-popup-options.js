@@ -69,7 +69,7 @@ $(document).ready(function() {
   // MagnificPopup
   var magnifPopup = function() {
     $('.overlay-more').magnificPopup({
-      removalDelay: 0,
+      removalDelay: 300,
       mainClass: 'mfp-with-zoom',
       gallery:{
         enabled:true
