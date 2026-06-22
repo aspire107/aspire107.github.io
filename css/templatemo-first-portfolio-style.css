@@ -1457,13 +1457,13 @@ strong {
   .contact-info .container .row > [class*="col-"] strong,
   .contact-info .container .row > [class*="col-"] p,
   .contact-info .container .row > [class*="col-"] a {
-    text-align: left !important;
+    text-align: right !important;
     display: block !important;
   }
 
   .contact-info .site-footer-title {
     font-size: 8px !important;
-    text-align: left !important;
+    text-align: right !important;
   }
 
   .contact-info p,
@@ -1684,7 +1684,7 @@ strong {
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   .hero {
     padding-top: 30px;
     padding-bottom: 0;
@@ -1698,7 +1698,7 @@ strong {
     padding-right: 10px;
   }
 
-  .hero .col-5 {
+  .hero .row .col-5 {
     position: static !important;
     height: 0;
     width: 0;
@@ -1721,28 +1721,28 @@ strong {
 
   .hero .logo-image {
     position: absolute !important;
-    right: -10px;
+    right: 0;
     left: auto;
-    top: -30px;
-    height: 300px;
+    top: -40px;
+    height: 320px;
     width: auto;
     max-width: none;
     margin: 0;
     transform: none;
     object-fit: contain;
-    z-index: 5;
+    z-index: 0;
   }
 
   .hero-title {
     font-size: 15px;
     padding: 3px 10px;
-    letter-spacing: 0.01px;
+    letter-spacing: 0.5px;
   }
 
   .hero h2 {
     font-size: 12px;
     padding: 3px 10px;
-    letter-spacing: 0.01px;
+    letter-spacing: 0.3px;
   }
 
   .hero-text p:last-of-type {
@@ -1774,7 +1774,7 @@ strong {
     transition: border-color 0.3s ease;
   }
 
-  .projects-thumb a.overlay {
+  .projects-thumb > a.overlay {
     pointer-events: none;
   }
 
@@ -1891,6 +1891,7 @@ strong {
     width: 94% !important;
     top: 2vh !important;
     bottom: 2vh !important;
+    overflow-y: auto;
   }
 
   .popup-modal-other.detail-popup .link-box {
@@ -1915,6 +1916,75 @@ strong {
     width: 94% !important;
     bottom: 2vh !important;
     padding: 10px 16px !important;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 480px) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .hero .col-7 {
+    width: 55%;
+  }
+
+  .hero-text {
+    padding-right: 10px;
+  }
+
+  .hero .col-lg-5 {
+    position: static !important;
+  }
+
+  .hero-title {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero h2 {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .hero .logo-image {
+    right: 0;
+    left: auto;
+    top: -90px;
+    height: 340px;
+    transform: none;
+    z-index: 0;
+  }
+
+  .projects .col-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact-info .container .row.justify-content-center {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .contact-info .container .row > [class*="col-"] {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contact-info .container .row > [class*="col-"] strong,
+  .contact-info .container .row > [class*="col-"] p,
+  .contact-info .container .row > [class*="col-"] a {
+    text-align: left !important;
+    display: block !important;
+  }
+
+  .contact-info > .site-footer-title {
+    text-align: left !important;
   }
 }
 

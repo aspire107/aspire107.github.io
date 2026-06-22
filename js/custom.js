@@ -146,7 +146,7 @@ const button5 = document.getElementById("button-experience");
 const details5 = document.getElementById("modal-42");
 
 function openPopupOnMobile(details, buttonEl, modalSelector) {
-  if (window.innerWidth <= 360) {
+  if (window.innerWidth <= 400) {
     buttonEl.classList.add("card-animate");
     setTimeout(() => {
       buttonEl.classList.remove("card-animate");
