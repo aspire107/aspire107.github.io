@@ -1676,6 +1676,153 @@ strong {
 }
 
 
+@media screen and (max-width: 360px) {
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .hero .col-7 {
+    width: 55%;
+  }
+
+  .hero-text {
+    padding-right: 10px;
+  }
+
+  .hero .col-5 {
+    position: static !important;
+    height: 0;
+    width: 0;
+    overflow: visible;
+  }
+
+  .hero .row .position-relative {
+    position: static !important;
+  }
+
+  .hero .hero-image-wrap {
+    display: none;
+  }
+
+  .hero .hero-image {
+    position: static !important;
+    min-width: 0;
+    z-index: auto;
+  }
+
+  .hero .logo-image {
+    position: absolute !important;
+    right: -10px;
+    left: auto;
+    top: -30px;
+    height: 300px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    transform: none;
+    object-fit: contain;
+    z-index: 5;
+  }
+
+  .hero-title {
+    font-size: 15px;
+    padding: 3px 10px;
+    letter-spacing: 0.01px;
+  }
+
+  .hero h2 {
+    font-size: 12px;
+    padding: 3px 10px;
+    letter-spacing: 0.01px;
+  }
+
+  .hero-text p:last-of-type {
+    gap: 6px;
+  }
+
+  .section-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 22px !important;
+  }
+
+  .projects-thumb {
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+
+  .projects-title {
+    font-size: 14px;
+  }
+
+  .projects-tag {
+    font-size: 10px;
+  }
+
+  .contact-info {
+    padding: 30px 20px;
+  }
+
+  .contact-info .site-footer-title {
+    font-size: 10px !important;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    font-size: 11px !important;
+  }
+
+  .clickable-banner {
+    min-height: 24vh !important;
+  }
+
+  .clickable-banner h3 {
+    font-size: 16px !important;
+  }
+
+  .clickable-banner p {
+    font-size: 10px !important;
+  }
+
+  .popup-modal-other.detail-popup {
+    left: 3% !important;
+    max-width: 94% !important;
+    width: 94% !important;
+    top: 2vh !important;
+    bottom: 2vh !important;
+  }
+
+  .popup-modal-other.detail-popup .link-box {
+    left: 3% !important;
+    width: 94% !important;
+    bottom: 2vh !important;
+    padding: 10px 16px !important;
+  }
+
+  .popup-modal-filmmaking {
+    left: 3% !important;
+    max-width: 94% !important;
+    width: 94% !important;
+    top: 2vh !important;
+    bottom: 2vh !important;
+  }
+
+  .popup-modal-filmmaking .link-box {
+    left: 3% !important;
+    width: 94% !important;
+    bottom: 2vh !important;
+    padding: 10px 16px !important;
+  }
+}
+
 .init-banner{
   background-image: url('/images/AV-Banner.png');
   background-size: cover;
