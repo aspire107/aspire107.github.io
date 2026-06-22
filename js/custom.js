@@ -145,60 +145,60 @@ const details4 = document.getElementById("modal-41");
 const button5 = document.getElementById("button-experience");
 const details5 = document.getElementById("modal-42");
 
+function openPopupOnMobile(details, buttonEl, modalSelector) {
+  if (window.innerWidth <= 360) {
+    buttonEl.classList.add("card-animate");
+    setTimeout(() => {
+      buttonEl.classList.remove("card-animate");
+      $.magnificPopup.open({
+        items: { src: modalSelector, type: "inline" },
+        removalDelay: 0,
+        mainClass: "mfp-fade",
+        showCloseBtn: false,
+        closeOnBgClick: true,
+        enableEscapeKey: false
+      });
+      details.classList.remove("onclick");
+      details.classList.remove("clicked");
+      details.classList.add("onclick");
+      setTimeout(() => {
+        details.classList.add("clicked");
+      }, 500);
+    }, 300);
+  } else {
+    details.classList.remove("onclick");
+    details.classList.remove("clicked");
+    details.classList.add("onclick");
+    setTimeout(() => {
+      details.classList.add("clicked");
+    }, 500);
+  }
+}
+
 /* add callback function, which will be executed after clicking on the button */
-const callback1 = () => {
-
-  details1.classList.remove("onclick");
-  details1.classList.remove("clicked");
-
-  details1.classList.add("onclick");
-  setTimeout(() => {
-    details1.classList.add("clicked")
-  }, 500);
+const callback1 = (e) => {
+  e.stopPropagation();
+  openPopupOnMobile(details1, button1, "#modal-33");
 };
 
-const callback2 = () => {
-
-  details2.classList.remove("onclick");
-  details2.classList.remove("clicked");
-
-  details2.classList.add("onclick");
-  setTimeout(() => {
-    details2.classList.add("clicked")
-  }, 500);
+const callback2 = (e) => {
+  e.stopPropagation();
+  openPopupOnMobile(details2, button2, "#modal-35");
 };
 
-const callback3 = () => {
-
-  details3.classList.remove("onclick");
-  details3.classList.remove("clicked");
-
-  details3.classList.add("onclick");
-  setTimeout(() => {
-    details3.classList.add("clicked")
-  }, 500);
+const callback3 = (e) => {
+  e.stopPropagation();
+  openPopupOnMobile(details3, button3, "#modal-34");
 };
 
-const callback4 = () => {
-
-  details4.classList.remove("onclick");
-  details4.classList.remove("clicked");
-
-  details4.classList.add("onclick");
-  setTimeout(() => {
-    details4.classList.add("clicked")
-  }, 500);
+const callback4 = (e) => {
+  e.stopPropagation();
+  openPopupOnMobile(details4, button4, "#modal-41");
 };
 
-const callback5 = () => {
-
-  details5.classList.remove("onclick");
-  details5.classList.remove("clicked");
-
-  details5.classList.add("onclick");
-  setTimeout(() => {
-    details5.classList.add("clicked")
-  }, 500);
+const callback5 = (e) => {
+  e.stopPropagation();
+  openPopupOnMobile(details5, button5, "#modal-42");
 };
 
 /* add event listener */
